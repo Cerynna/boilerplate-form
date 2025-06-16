@@ -1,3 +1,32 @@
+@use "sass:color";
+
 $bgColor: #0c0c0c;
 $mainColor: #c23e0a;
 $textColor: #dadada;
+
+@mixin Scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: rgba(0, 0, 0, 0);
+    &-track {
+      background: transparent;
+      border-radius: 0.25rem;
+      width: 0.5rem;
+    }
+    &-thumb {
+      background: $bgColor;
+      border-radius: 0.25rem;
+      width: 0.5rem;
+    }
+    &-thumb:hover {
+      background: $mainColor;
+    }
+  }
+}
+
+@mixin defaultBloc() {
+  background: color.scale($bgColor, $lightness: 5%);
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+}

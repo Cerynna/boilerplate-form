@@ -1,4 +1,4 @@
-@use 'sass:color';
+@use "sass:color";
 
 @use "./reset";
 @use "./form" as form;
@@ -7,20 +7,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
 
-@mixin FunnelDisplay() {
-  font-family: "Funnel Display", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@mixin defaultBloc() {
-//   background: lighten($bgColor, 5);
-  background: color.scale($bgColor, $lightness: 5%);
-  padding: 0.5rem 0.5rem;
-  border-radius: 0.5rem;
-}
-
 html {
   width: 100vw;
   height: 100vh;
@@ -28,7 +14,8 @@ html {
   background-size: cover;
   background-position: center center;
   color: $textColor;
-  @include FunnelDisplay();
+  @include typo.FunnelDisplay();
+  overflow: hidden;
   #root {
     display: flex;
     flex-direction: column;
@@ -37,6 +24,10 @@ html {
     gap: 1rem;
     form {
       @include defaultBloc();
+    }
+    footer {
+      position: absolute;
+      bottom: 0.5rem;
     }
     .field {
       display: flex;
@@ -55,6 +46,9 @@ html {
       .table {
         border-radius: 0.5rem;
         overflow: hidden;
+        max-height: 80vh;
+        overflow-y: scroll;
+        @include Scrollbar();
         .row {
           padding: 0.25rem 0.5rem;
           background: color.scale($bgColor, $lightness: 30%);

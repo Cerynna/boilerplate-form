@@ -4,6 +4,7 @@ import Form from "./components/Form";
 
 import "./stylesheets/main.scss";
 import Result from "./components/Result";
+import Footer from "./components/Footer";
 
 function App() {
   const [data, setData] = useState<string[][]>([]);
@@ -22,10 +23,10 @@ function App() {
     <>
       <h1>Boilerplate Form with GoogleSheet</h1>
       <div className="row">
-      <Form callback={updateData} />
-<Result data={data} />
+        <Form callback={updateData} />
+        <Result data={data} />
       </div>
-      {/* {JSON.stringify(data, null, 2)} */}
+      <Footer />
     </>
   );
 }

@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { addRowToSheet } from "../services/sheet";
 
 export default function Form({ callback }: { callback: () => void }) {
   const [inputs, setInputs] = useState<string[]>([""]);
+  const lastInputRef = useRef<HTMLInputElement | null>(null);
+  useEffect(() => {
+    if (lastInputRef.current) {
+      lastInputRef.current.focus();
+    }
+  }, [inputs.length]);
+
   const clearInputs = () => {
     setInputs([""]);
   };
@@ -33,6 +40,7 @@ export default function Form({ callback }: { callback: () => void }) {
             onChange={(e) => handleChange(index, e.target.value)}
             placeholder={`Input #${index + 1}`}
             style={{ display: "block", marginBottom: "8px" }}
+            ref={index === inputs.length - 1 ? lastInputRef : null}
           />
         </div>
       ))}
