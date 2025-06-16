@@ -1,0 +1,72 @@
+[
+    {
+        "label": "Si tu étais un super-héros, quel serait ton super-pouvoir le plus inutile ?",
+        "type": "select",
+        "options": [
+            "Changer la couleur de mes chaussettes à volonté",
+            "Parler aux plantes... mais elles ne répondent jamais",
+            "Téléporter uniquement mes clés perdues",
+            "Contrôler la météo... uniquement quand je suis à l'intérieur"
+        ]
+    },
+    {
+        "label": "Quelle est ta technique secrète pour éviter les corvées ?",
+        "type": "select",
+        "options": [
+            "Faire semblant d'être en réunion importante",
+            "Planifier une sieste stratégique",
+            "Disparaître mystérieusement",
+            "Déléguer à un collègue imaginaire"
+        ]
+    },
+    {
+        "label": "Raconte-nous la pire excuse que tu as utilisée pour ne pas aller au boulot.",
+        "type": "text"
+    },
+    {
+        "label": "Si tu pouvais dîner avec un personnage fictif, qui choisirais-tu ?",
+        "type": "select",
+        "options": [
+            "Harry Potter (espérons qu'il paie l'addition)",
+            "Sherlock Holmes (pour qu'il résolve nos débats)",
+            "Darth Vader (juste pour voir sa tête sans casque)",
+            "Bob l'éponge (parce que pourquoi pas)"
+        ]
+    },
+    {
+        "label": "Quel est ton rituel matinal qui n'a aucun sens mais que tu fais quand même ?",
+        "type": "text"
+    },
+    {
+        "label": "Combien de fois as-tu regardé l'heure sans raison aujourd'hui ?",
+        "type": "select",
+        "options": [
+            "0 (je vis dans le présent)",
+            "5 à 10 fois (juste par curiosité)",
+            "Plus de 20 fois (c'est un hobby)",
+            "Je crois que mon téléphone est cassé"
+        ]
+    },
+    {
+        "label": "Si tu devais inventer un nouveau sport, ce serait lequel ?",
+        "type": "textarea"
+    },
+    {
+        "label": "Quelle chanson te décrit le mieux quand tu travailles ?",
+        "type": "text"
+    },
+    {
+        "label": "Quelle est la chose la plus bizarre que tu aies mangée par accident ?",
+        "type": "text"
+    },
+    {
+        "label": "Si ton animal de compagnie pouvait parler, que te dirait-il en ce moment ?",
+        "type": "select",
+        "options": [
+            "« Encore en train de bosser ? Va jouer ! »",
+            "« J'ai faim, chef ! »",
+            "« Tu as laissé la porte ouverte, attention aux fantômes ! »",
+            "« T'es marrant quand tu danses »"
+        ]
+    }
+]
