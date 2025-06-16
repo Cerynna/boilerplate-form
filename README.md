@@ -1,27 +1,60 @@
 # Boilerplate Form
 
-Ce Boilerplate a pour but de crée un formulaire anonyme.
-Pas de limitation d'input avec un Form qui peu crée des inputs a la volé.
+Un boilerplate simple pour créer un formulaire anonyme, flexible et dynamique.  
+Ajoute autant de champs que tu veux à la volée, sans limitation !
 
-## Config
-Crée un clé API https://console.cloud.google.com/apis/credentials > Create credential > API keys
-Copier la clé API dans le .env
+---
 
-Crée un Gsheet => https://docs.google.com/spreadsheets/u/0/
-Mettre ce Gsheet en "Tous les utilisateurs qui ont le lien" > Lecteur
+## 🚀 Configuration
 
-Dans l'URL du Gsheet récupéré l'ID https://docs.google.com/spreadsheets/d/********
-La coller dans le .env
+### 1. Obtenir ta clé API Google
 
-Il faut aussi mettre le nom de la feuille dans le .env
+- Va sur [Google Cloud Console - API Credentials](https://console.cloud.google.com/apis/credentials)  
+- Clique sur **Create Credentials** > **API key**  
+- Copie ta clé API dans le fichier `.env`
 
-Puis aller dans AppScript (Extensions > AppsScript)
-Dans Code.gs copier ce qui est fourni dans le dossier AppsScript/Code.gs
-Déployer le script
-Application Web
-Description > Webhook AddRow
-Exécuter en tant que > Moi
-Qui a accès > Tout le monde
+---
 
-Copier l'URL dans le fichier .env
+### 2. Préparer ton Google Sheet
 
+- Crée un Google Sheet ici : [https://docs.google.com/spreadsheets/u/0/](https://docs.google.com/spreadsheets/u/0/)  
+- Partage-le en lecture à : **« Tous les utilisateurs ayant le lien »**  
+- Récupère l’ID de ta feuille dans l’URL (entre `/d/` et `/edit`)  
+- Colle cet ID dans le `.env`
+
+---
+
+### 3. Configurer la feuille
+
+- Note le nom de la feuille (onglet) que tu souhaites utiliser  
+- Ajoute ce nom dans ton `.env`
+
+---
+
+### 4. Déployer le script Apps Script
+
+- Ouvre ton Google Sheet  
+- Va dans **Extensions > Apps Script**  
+- Remplace le contenu de `Code.gs` par celui fourni dans le dossier `AppsScript/Code.gs` de ce projet  
+- Publie ton script en tant qu’**Application Web** :  
+  - Description : `Webhook AddRow`  
+  - Exécuter l’application en tant que : **Toi**  
+  - Accès : **Tout le monde, même anonymes**
+
+- Copie l’URL générée dans ton fichier `.env`
+
+---
+
+## 🌐 Hébergement
+
+Ce projet utilise **gh-pages** pour héberger le site statique.
+
+---
+
+## 🎉 Tu es prêt·e !
+
+Lance l’application localement ou en ligne et collecte des réponses anonymes directement dans ta Google Sheet.
+
+---
+
+Besoin d’aide ou d’une feature ? N’hésite pas à ouvrir une issue !

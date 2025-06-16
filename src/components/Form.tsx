@@ -21,11 +21,13 @@ export default function Form({ callback }: { callback: () => void }) {
   };
   return (
     <form onSubmit={handleSubmit}>
+      <h2>Formulaire</h2>
       {inputs.map((value, index) => (
-        <div key={index}>
+        <div className="field" key={index}>
           <label htmlFor={`input_${index}`}>Input #{index + 1}</label>
           <input
             name={`input_${index}`}
+            id={`input_${index}`}
             type="text"
             value={value}
             onChange={(e) => handleChange(index, e.target.value)}

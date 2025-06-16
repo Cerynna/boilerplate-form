@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { fetchSheetData } from "./services/sheet";
 import Form from "./components/Form";
 
+import "./stylesheets/main.scss";
+import Result from "./components/Result";
+
 function App() {
   const [data, setData] = useState<string[][]>([]);
   const updateData = () => {
@@ -17,9 +20,12 @@ function App() {
 
   return (
     <>
-      <h1>Test</h1>
+      <h1>Boilerplate Form with GoogleSheet</h1>
+      <div className="row">
       <Form callback={updateData} />
-      {JSON.stringify(data, null, 2)}
+<Result data={data} />
+      </div>
+      {/* {JSON.stringify(data, null, 2)} */}
     </>
   );
 }
